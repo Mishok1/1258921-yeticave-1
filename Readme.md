@@ -1,7 +1,7 @@
 # Личный проект «YetiCave»
 
 * Студент: [Michael Melnikov](https://up.htmlacademy.ru/php-individual/1/user/1258921).
-* Наставник: `Неизвестно`.
+* Наставник: `Максим Анатольев `.
 
 ---
 
