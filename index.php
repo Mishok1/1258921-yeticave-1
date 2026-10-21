@@ -30,23 +30,6 @@ $user_name = 'Mishok21';
 
                 <nav class="user-menu">
 
-                    <?php if ($is_auth): ?>
-                        <div class="user-menu__logged">
-                            <p><?= $user_name ?></p>
-                            <a class="user-menu__bets" href="pages/my-bets.html">Мои ставки</a>
-                            <a class="user-menu__logout" href="#">Выход</a>
-                        </div>
-                    <?php else: ?>
-                        <ul class="user-menu__list">
-                            <li class="user-menu__item">
-                                <a href="#">Регистрация</a>
-                            </li>
-                            <li class="user-menu__item">
-                                <a href="#">Вход</a>
-                            </li>
-                        </ul>
-                    <?php endif; ?>
-
                 </nav>
             </div>
         </header>
