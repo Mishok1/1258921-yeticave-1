@@ -1,5 +1,8 @@
 <?php
 
+declare(strict_types=1);
+
+
 function formatSum(int $number)
 {
     $number = ceil($number);
@@ -8,11 +11,6 @@ function formatSum(int $number)
     }
     return $number .= " ₽";
 }
-
-date_default_timezone_set('Europe/Moscow');
-const SECONDS_PER_HOUR = 3600;
-const SECONDS_PER_MINUTE = 60;
-const END_OF_COUNTER = 0;
 
 function get_dt_range(string $lot_date): array
 {
@@ -25,4 +23,9 @@ function get_dt_range(string $lot_date): array
     $minutes = floor(($interval / SECONDS_PER_HOUR - $hours) * SECONDS_PER_MINUTE);
 
     return [sprintf('%02d', $hours), sprintf('%02d', $minutes)];
+}
+
+function hsc(mixed  $value): mixed
+{
+    return htmlspecialchars($value, ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8');
 }

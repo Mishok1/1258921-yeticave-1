@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  *  @var array $categories
  */
@@ -11,7 +13,7 @@
             <!--заполните этот список из массива категорий-->
             <?php foreach ($categories as $category): ?>
                 <li class="nav__item">
-                    <a href="pages/all-lots.html"><?= htmlspecialchars($category) ?></a>
+                    <a href="pages/all-lots.html"><?= hsc($category) ?></a>
                 </li>
             <?php endforeach; ?>
         </ul>
@@ -69,5 +71,3 @@
         </div>
     </div>
 </footer>
-
-

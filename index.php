@@ -1,29 +1,26 @@
 <?php
 
-require_once './helpers.php';
+declare(strict_types=1);
+
+require_once './functions/helpers.php';
 require_once './mocks/data.php';
 require_once './functions/index.php';
+require_once './functions/consts.php';
 
-$main_header = include_template('./layout/_main-header.php', [
-    'user_name' => $user_name,
-    'title' => $title,
-    'is_auth' => $is_auth,
-]);
+date_default_timezone_set('Europe/Moscow');
+
 
 $page_content = include_template('main.php', [
     'categories' => $categories,
     'lots' => $lots,
 ]);
 
-$main_footer = include_template('_main-footer.php', [
-    'categories' => $categories,
-]);
-
-$layout_content = include_template('./layout/layout.php', [
-    'main_header' => $main_header,
+$layout_content = include_template('./layout/main.php', [
     'page_content' => $page_content,
-    'main_footer' => $main_footer,
     'categories' => $categories,
+    'user_name' => $user_name,
+    'title' => $title,
+    'is_auth' => $is_auth,
 ]);
 
 print($layout_content);
